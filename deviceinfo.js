@@ -62,4 +62,5 @@ module.exports = {
   isTablet: function() {
     return RNDeviceInfo.isTablet;
   },
+  infoDictionary: RNDeviceInfo.infoDictionary,
 };

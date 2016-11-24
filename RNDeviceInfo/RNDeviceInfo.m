@@ -168,6 +168,9 @@ RCT_EXPORT_MODULE()
 
     NSString *uniqueId = [DeviceUID uid];
 
+    NSString *path = [[NSBundle mainBundle] pathForResource: @"Info" ofType: @"plist"];
+    NSMutableDictionary *plistDict =[[NSMutableDictionary alloc] initWithContentsOfFile:path];
+
     return @{
              @"systemName": currentDevice.systemName,
              @"systemVersion": currentDevice.systemVersion,
@@ -186,6 +189,7 @@ RCT_EXPORT_MODULE()
              @"timezone": self.timezone,
              @"isEmulator": @(self.isEmulator),
              @"isTablet": @(self.isTablet),
+             @"infoDictionary": plistDict,
              };
 }
 
