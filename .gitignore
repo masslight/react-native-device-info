@@ -2,6 +2,9 @@ node_modules
 
 .DS_Store
 
+# Vim
+*.sw?
+
 # Xcode
 #
 build/
